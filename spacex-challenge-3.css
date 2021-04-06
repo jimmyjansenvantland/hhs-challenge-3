@@ -1,0 +1,191 @@
+* {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+
+::-webkit-scrollbar {
+  display: none; }
+
+a.dashboardButton {
+  background-color: #28B3FF;
+  font-size: 14pt;
+  border: none;
+  padding: 20px;
+  border-radius: 100px; }
+
+h1 {
+  font-size: 25pt;
+  white-space: nowrap; }
+  @media only screen and (min-width: 800px) {
+    h1 {
+      white-space: normal; } }
+
+h2 {
+  font-size: 20pt;
+  white-space: nowrap; }
+  @media only screen and (max-width: 800px) {
+    h2 {
+      white-space: normal; } }
+
+h3 {
+  font-size: 18pt;
+  white-space: nowrap; }
+  @media only screen and (min-width: 800px) {
+    h3 {
+      white-space: normal; } }
+
+p {
+  font-size: 14pt; }
+
+span.largeNumber {
+  font-size: 30pt; }
+
+canvas {
+  width: 100%;
+  height: 100%; }
+
+.percentage {
+  padding: 30px 15px;
+  background-color: #ffffff;
+  font-size: 25pt;
+  color: #0D0B0F;
+  position: absolute;
+  width: fit-content;
+  border-radius: 200px;
+  font-weight: 800; }
+
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 30px; }
+  #map .mapPopupInner {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    text-align: center; }
+    #map .mapPopupInner h3 {
+      color: black;
+      line-height: 22pt;
+      font-size: 16pt; }
+    #map .mapPopupInner p {
+      color: gray;
+      font-size: 14pt; }
+
+#map-satellite {
+  height: 300px;
+  width: 100%;
+  border-radius: 30px; }
+
+body {
+  background: #0D0B0F; }
+  body main.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100vh;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden; }
+    @media only screen and (min-width: 1500px) {
+      body main.container {
+        height: 100%;
+        overflow: visible; } }
+    body main.container header {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+      body main.container header h2 {
+        color: #5E5C66;
+        margin-top: 10px; }
+    body main.container section#dashboard {
+      background: linear-gradient(28deg, #2d2c31 0%, #2e2d34 100%);
+      border-radius: 50px;
+      margin-top: 30px;
+      overflow-x: scroll;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch; }
+      @media only screen and (min-width: 1500px) {
+        body main.container section#dashboard {
+          overflow: visible;
+          height: auto; } }
+      body main.container section#dashboard > section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px 0px 20px; }
+        body main.container section#dashboard > section > section h1 {
+          margin-bottom: 10px; }
+      body main.container section#dashboard section#dashboard-grid {
+        margin: 20px;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "art1" "art2" "art3";
+        column-gap: 20px;
+        row-gap: 20px;
+        align-items: stretch; }
+        @media only screen and (min-width: 800px) and (max-width: 999px) {
+          body main.container section#dashboard section#dashboard-grid {
+            grid-template-columns: 48% 48%;
+            grid-template-areas: "art1 art1" "art2 art3"; } }
+        @media only screen and (min-width: 1000px) and (max-width: 1500px) {
+          body main.container section#dashboard section#dashboard-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "art1 art1" "art2 art3"; } }
+        @media only screen and (min-width: 1500px) {
+          body main.container section#dashboard section#dashboard-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "art1 art1" "art2 art3"; } }
+        body main.container section#dashboard section#dashboard-grid article {
+          background-color: #0D0B0F;
+          padding: 40px;
+          border-radius: 50px;
+          margin: 10px 0px;
+          position: relative; }
+          body main.container section#dashboard section#dashboard-grid article section {
+            margin-top: 30px; }
+          body main.container section#dashboard section#dashboard-grid article h3 {
+            margin-bottom: 10px; }
+        body main.container section#dashboard section#dashboard-grid article.time-and-distance {
+          grid-area: art1; }
+        body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround {
+          grid-area: art2; }
+          @media only screen and (min-width: 1000px) and (max-width: 1500px) {
+            body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround {
+              align-self: flex-start; } }
+          body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround > section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; }
+            body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround > section > section {
+              width: 50%; }
+              body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround > section > section:nth-of-type(1) h3 {
+                color: #E51736; }
+              body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround > section > section:nth-child(2) h3 {
+                color: #00CC61; }
+              body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround > section > section:nth-child(3) {
+                margin-top: 50px; }
+                body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround > section > section:nth-child(3) h3 {
+                  color: #28B3FF; }
+              body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround > section > section:nth-child(4) {
+                margin-top: 50px; }
+                body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround > section > section:nth-child(4) h3 {
+                  color: #28B3FF; }
+            > body main.container section#dashboard section#dashboard-grid article.weatherOnTheGround > section:nth-child(2) {
+              position: relative; }
+        body main.container section#dashboard section#dashboard-grid article.sataliteViewMainPoint {
+          grid-area: art3; }
+    body main.container p.footer {
+      width: 100%;
+      text-align: center;
+      color: #5E5C66;
+      padding: 20px 0px; }

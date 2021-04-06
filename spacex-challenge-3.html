@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX Dashboard | The Road to Mars</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <script src="spacex-challenge-3.js" defer></script>
+    <link rel="stylesheet" href="spacex-dashboard-challenge-1-css-reset.css">
+    <link rel="stylesheet" href="spacex-challenge-3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <img src="spacex-logo.png" alt="SpaceX Logo">
+            <h2>The Route to Mars</h2>
+        </header>
+        <section id="dashboard">
+            <section>
+                <section>
+                    <h1>Dashboard</h1>
+                    <h2 id="date">March 30, 2021</h2>
+                </section>
+                <a class="dashboardButton">The Route Back
+                    <img src="arrow.svg" alt="v">
+                </a>
+            </section>
+            <section id="dashboard-grid">
+                <article class="time-and-distance">
+                    <h2>Best current landing spots</h2>
+                    <section>
+                        <div id="map"></div>
+                    </section>
+                </article>
+                <article class="weatherOnTheGround">
+                    <h2>Weather on the ground, main point</h2>
+                    <section>
+                        <section>
+                            <h3>Temperature</h3>
+                            <p><span id="temperature" class="largeNumber">No data&#176;</span>c</p>
+                        </section>
+                        <section>
+                            <h3>Condition</h3>
+                            <p><span id="condition" class="largeNumber">No data</span></p>
+                        </section>
+                        <section>
+                            <h3>Humidity</h3>
+                            <p><span id="humidity" class="largeNumber">No data</span>%</p>
+                        </section>
+                        <section>
+                            <h3>Wind</h3>
+                            <p><span id="windSpeed" class="largeNumber">No data</span>km/h</p>
+                        </section>
+                    </section>
+                </article>
+                <article class="sataliteViewMainPoint">
+                    <h2>Satalite view of main point</h2>
+                    <section>
+                        <section>
+                            <div id="map-satellite"></div>
+                        </section>
+                    </section>
+                </article>
+            </section>
+        </section>
+        <p class="footer">Jimmy Jansen van 't Land</p>
+    </main>
+</body>
+</html>
